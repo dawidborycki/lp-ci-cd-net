@@ -23,7 +23,8 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
   build-and-push-docker-image:
-    runs-on: ubuntu
+    needs: build
+    runs-on: self-hosted
     
     steps:
     - uses: actions/checkout@v2
