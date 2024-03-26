@@ -20,7 +20,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build -a Arm64 -c Release
 
   build-and-push-docker-image:
     needs: build
