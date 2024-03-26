@@ -41,7 +41,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: dawborycki/sampleapp:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/sampleapp:latest
         platforms: linux/arm64
     
     - name: Logout of DockerHub
